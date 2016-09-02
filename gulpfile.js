@@ -14,3 +14,17 @@ gulp.task('styles', function () {
         .pipe($.csso())
         .pipe(gulp.dest('./dist/css/'));
 });
+
+
+// Watch
+gulp.task('watch', function () {
+
+    // Watch .scss files
+    gulp.watch('/src/scss/**/*.scss', ['styles']);
+
+    // // Watch .js files
+    // gulp.watch('/src/js/*.js', ['js']);
+    //
+    // // Watch image files
+    // gulp.watch('/src/images/**/*', ['image']);
+});
