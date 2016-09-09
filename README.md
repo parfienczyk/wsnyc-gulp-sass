@@ -3,9 +3,13 @@
 
 
 Install all dependecies
-  
+
   `$ npm install`
-  
+
 Run Gulp  
-  
+
   `$ gulp styles`
+
+Server
+
+    `$ gulp serve`
