@@ -1,0 +1,26 @@
+// layout/_nav.scss
+
+nav {
+    padding: 10px;
+    border-radius: 5px;
+    float:right;
+
+    .level-0 {
+        a {
+            color: $color-red;
+            &:hover {
+
+            }
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+
+    // .level-0.active ===> class="level-0 active"
+
+    .level-1 {
+
+    }
+}
