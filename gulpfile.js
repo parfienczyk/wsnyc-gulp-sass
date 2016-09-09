@@ -2,6 +2,7 @@
 // Modules
 // ======================================================
 var gulp = require('gulp');
+var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var $ = require('gulp-load-plugins')();
 
@@ -10,7 +11,7 @@ var $ = require('gulp-load-plugins')();
 // ======================================================
 gulp.task('styles', function () {
    return gulp.src('./scss/**/*.scss')
-       .pipe($.sass())
+       .pipe(sass.sync().on('error', sass.logError))
        .pipe($.autoprefixer({browsers: ['last 10 version']}))
        .pipe($.csso())
        .pipe(gulp.dest('./css/'))
